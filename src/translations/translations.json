@@ -1,0 +1,32 @@
+{
+  "en": {
+    "translation": {
+      "main": {
+        "title": "Hi people",
+        "subtitle": "Welcome to your new Gatsby site.",
+        "second": "Hi from the second page.",
+        "link_1": "Got to page 2",
+        "link_2": "Go back to the homepage"
+      },
+      "language": {
+        "english": "English",
+        "german": "German"
+      }
+    }
+  },
+  "de": {
+    "translation": {
+      "main": {
+        "title": "Hallo Leute",
+        "subtitle": "Willkommen auf Ihrer neuen Gatsby-Site.",
+        "second": "Hallo ab der zweiten Seite",
+        "link_1": "Gehen Sie zu Seite 2",
+        "link_2": "Zurück zur Startseite"
+      },
+      "language": {
+        "english": "Englisch",
+        "german": "Deutsch"
+      }
+    }
+  }
+}

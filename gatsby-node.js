@@ -1,7 +1,21 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const config = require('./gatsby-config');
 
-// You can delete this file if you're not using it
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions;
+  await Promise.all(
+    config.siteMetadata.supportedLanguages.map(async lang => {
+      const originalPath = page.path;
+      const localizedPath = `/${lang}${page.path}`;
+      console.log(page, localizedPath);
+      await createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          ...page.context,
+          originalPath,
+          lang,
+        }
+      });
+    })
+  );
+};

@@ -1,8 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import LanguageToggle from "./language_toggle"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, location }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -27,6 +28,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <LanguageToggle location={location}/>
     </div>
   </header>
 )
